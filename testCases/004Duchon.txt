@@ -1,0 +1,149 @@
+// File: 004Duchon.txt
+// Data file for SeaPort projects
+// Date: Fri Oct 28 16:52:05 EDT 2016
+// parameters: 3 2 0 5 3 20
+//   ports, docks, pships, cships, jobs, persons
+
+// port   name index parent(null)
+//    port   <string> <int> <int>
+port Taldykorgan 10000 0
+port Gaoyao 10002 0
+port Toamasina 10001 0
+
+// dock   name index parent(port)
+//    dock   <string> <int> <int>
+  dock Pier_5 20005 10002 40011
+  dock Pier_3 20003 10001 40006
+  dock Pier_4 20004 10002 40010
+  dock Pier_0 20000 10000 40000
+  dock Pier_1 20001 10000 40001
+  dock Pier_2 20002 10001 40005
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+//    cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+    cship         Entrenchment 40011 20005 186.33 252.98 87.53 32.09 137.20 127.61 294.13
+    cship          Devolvement 40003 10000 106.31 157.58 79.28 18.40 55.88 125.75 376.09
+    cship           Perpetuity 40005 20002 236.50 170.86 109.09 20.54 108.74 191.74 327.09
+    cship            Mamelukes 40008 10001 105.58 401.51 39.42 16.96 118.99 106.38 110.11
+    cship          Undelivered 40000 20000 200.42 481.23 90.88 27.04 210.64 104.26 303.13
+    cship         Wisecrackers 40006 20003 100.88 202.70 102.77 24.73 137.28 126.32 465.96
+    cship               Testes 40012 10002 162.94 286.38 113.34 26.70 155.84 133.69 893.35
+    cship            Exploders 40001 20001 137.92 466.79 42.29 23.45 205.05 149.22 571.32
+    cship            Threatens 40013 10002 157.93 413.53 54.56 28.74 197.27 135.60 136.30
+    cship          Luminescent 40010 20004 69.92 369.34 37.74 28.56 67.74 168.37 73.28
+    cship              Proffer 40007 10001 63.97 489.22 87.33 36.78 191.76 188.44 216.84
+    cship           Enciphered 40009 10001 178.48 340.44 62.58 40.81 136.32 194.14 633.91
+    cship          Cardiograms 40002 10000 149.49 398.07 118.99 32.29 65.54 184.08 686.84
+    cship              Gnomons 40004 10000 102.75 420.57 92.91 24.24 76.72 106.29 68.84
+    cship                Scrim 40014 10002 195.30 134.42 100.98 41.10 116.23 128.79 692.58
+
+// person name index parent skill
+//    person <string> <int> <int> <string>
+    person                Bryan 50033 10001 crew
+    person                 Dawn 50017 10000 craneOperator
+    person                Katie 50006 10000 stevedore
+    person            Guillermo 50023 10001 mate
+    person                Sally 50002 10000 clerk
+    person               Elaine 50054 10002 engineer
+    person             Jeremiah 50041 10002 electrician
+    person                  Guy 50056 10002 driver
+    person                Celia 50013 10000 mate
+    person                Angie 50007 10000 inspector
+    person               Luther 50057 10002 carpenter
+    person              Tabitha 50010 10000 clerk
+    person                Ramon 50024 10001 cleaner
+    person                 Troy 50021 10001 crew
+    person                Alvin 50026 10001 clerk
+    person                 Pete 50036 10001 painter
+    person               Nellie 50009 10000 carpenter
+    person                Floyd 50020 10001 painter
+    person                Patti 50031 10001 craneOperator
+    person              Whitney 50050 10002 engineer
+    person               Miguel 50000 10000 cleaner
+    person                Robin 50047 10002 carpenter
+    person                Juana 50022 10001 janitor
+    person                 Karl 50025 10001 engineer
+    person               Rafael 50049 10002 inspector
+    person                Ebony 50051 10002 mate
+    person                Gregg 50014 10000 carpenter
+    person                Norma 50039 10001 mate
+    person                Duane 50005 10000 mechanic
+    person                Clark 50032 10001 janitor
+    person              Heather 50055 10002 janitor
+    person                Corey 50052 10002 electrician
+    person            Catherine 50028 10001 craneOperator
+    person                Paula 50027 10001 inspector
+    person                Tyler 50042 10002 janitor
+    person              Willard 50040 10002 clerk
+    person               Justin 50059 10002 crew
+    person                 Rose 50012 10000 janitor
+    person                  Joy 50030 10001 carpenter
+    person                Karla 50001 10000 carpenter
+    person                Duane 50053 10002 driver
+    person               Fannie 50034 10001 mate
+    person               Darrin 50015 10000 captain
+    person                 Andy 50019 10000 crew
+    person                  Ora 50048 10002 mate
+    person                Cesar 50046 10002 engineer
+    person                 Jose 50029 10001 janitor
+    person               Bennie 50008 10000 carpenter
+    person          Christopher 50037 10001 inspector
+    person                 Wade 50003 10000 mate
+    person                 Lola 50045 10002 janitor
+    person               Teresa 50018 10000 stevedore
+    person               Calvin 50058 10002 painter
+    person              Kenneth 50004 10000 driver
+    person                Jerry 50016 10000 craneOperator
+    person                  Kim 50035 10001 janitor
+    person                Leroy 50044 10002 driver
+    person                  Don 50011 10000 inspector
+    person                Clint 50038 10001 driver
+    person               Herman 50043 10002 clerk
+
+// job    name index parent duration [skill]* (zero or more, matches skill in person, may repeat)
+//    job    <string> <int> <int> <double> [<string>]*
+    job         Job_85_80_53 60022 40007 68.84 inspector janitor
+    job         Job_16_83_28 60042 40014 99.66
+    job         Job_15_56_67 60003 40001 55.75
+    job         Job_33_92_50 60033 40011 96.19 cleaner carpenter inspector
+    job         Job_94_59_18 60011 40003 108.13
+    job         Job_58_33_65 60001 40000 35.21 mate driver
+    job         Job_31_73_58 60035 40011 101.83 mechanic inspector crew mechanic
+    job         Job_71_29_46 60034 40011 56.55 painter inspector
+    job         Job_57_93_80 60036 40012 80.41
+    job         Job_30_11_98 60037 40012 75.18 engineer mate captain
+    job         Job_40_20_19 60007 40002 31.63 painter
+    job         Job_94_33_64 60008 40002 34.58 captain
+    job         Job_31_60_14 60002 40000 101.24 captain
+    job         Job_84_18_59 60044 40014 71.52 cleaner
+    job         Job_70_63_96 60013 40004 81.21
+    job         Job_39_14_55 60006 40002 51.94 painter inspector
+    job         Job_23_88_86 60009 40003 109.41 craneOperator crew
+    job         Job_14_10_66 60023 40007 61.64 crew craneOperator
+    job         Job_65_75_46 60038 40012 63.51 mate
+    job         Job_27_97_71 60004 40001 109.07 clerk stevedore clerk
+    job         Job_58_32_84 60027 40009 39.78 inspector
+    job         Job_67_81_21 60005 40001 110.12
+    job         Job_49_90_44 60025 40008 74.05 driver janitor
+    job         Job_72_33_68 60010 40003 20.12
+    job         Job_47_85_30 60020 40006 34.17 mate
+    job         Job_99_49_27 60029 40009 79.64 cleaner
+    job         Job_29_65_93 60012 40004 118.78 inspector captain
+    job         Job_98_29_69 60016 40005 64.05 janitor
+    job         Job_91_60_64 60040 40013 86.22 captain captain
+    job         Job_86_25_96 60032 40010 89.38 craneOperator mate janitor
+    job         Job_46_42_30 60021 40007 92.74 janitor
+    job         Job_66_19_75 60015 40005 42.37
+    job         Job_80_21_45 60024 40008 92.81 crew
+    job         Job_47_23_74 60028 40009 65.20 clerk janitor engineer electrician
+    job         Job_44_42_82 60026 40008 65.53 painter clerk
+    job         Job_99_55_63 60041 40013 110.89 mechanic
+    job         Job_73_37_31 60018 40006 52.41
+    job         Job_91_75_35 60030 40010 82.68 mechanic engineer
+    job         Job_83_42_37 60017 40005 82.22 carpenter carpenter inspector
+    job         Job_64_35_15 60014 40004 99.94 stevedore mate cleaner painter
+    job         Job_79_37_90 60031 40010 100.72
+    job         Job_41_63_87 60019 40006 24.77 electrician
+    job         Job_31_79_95 60043 40014 54.76 stevedore captain
+    job         Job_78_55_64 60000 40000 88.54 carpenter
+    job         Job_38_94_54 60039 40013 104.95

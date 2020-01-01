@@ -1,0 +1,80 @@
+// File: 003Duchon.txt
+// Data file for SeaPort projects
+// Date: Fri Oct 28 16:05:34 EDT 2016
+// parameters: 2 1 5 0 3 8
+//   ports, docks, pships, cships, jobs, persons
+
+// port   name index parent(null)
+//    port   <string> <int> <int>
+port Xiaolan_(Shi_Qi) 10000 0
+port La_Spezia 10001 0
+
+// dock   name index parent(port)
+//    dock   <string> <int> <int>
+  dock Pier_1 20001 10001 30005
+  dock Pier_0 20000 10000 30000
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+//    pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+    pship            Procurers 30006 10001 145.46 228.87 96.74 24.59 362 502 181
+    pship                Mimic 30005 20001 237.63 284.52 55.98 20.27 605 332 302
+    pship              Burbled 30009 10001 72.56 158.57 44.15 26.13 23 495 11
+    pship           Catchwords 30000 20000 119.83 355.59 113.62 40.79 695 433 347
+    pship          Deliquesced 30003 10000 101.34 111.42 128.95 33.05 344 156 156
+    pship         Petrographic 30008 10001 95.67 387.08 33.54 15.73 3699 1052 1052
+    pship            Antivenin 30007 10001 244.73 134.19 49.56 21.15 1233 310 310
+    pship           Conventing 30004 10000 163.29 207.63 30.00 15.48 1338 368 368
+    pship             Whatnots 30002 10000 162.53 393.43 80.88 33.83 784 567 392
+    pship            Cratering 30001 10000 169.52 408.80 105.25 35.12 558 626 279
+
+// person name index parent skill
+//    person <string> <int> <int> <string>
+    person                Jared 50011 10001 stevedore
+    person             Geoffrey 50001 10000 crew
+    person               Darrin 50014 10001 electrician
+    person                Doyle 50006 10000 mechanic
+    person               Stella 50007 10001 carpenter
+    person              Roxanne 50003 10000 inspector
+    person              Delbert 50013 10001 cleaner
+    person               Walter 50012 10001 mechanic
+    person            Guadalupe 50002 10000 mate
+    person                 Lana 50010 10001 crew
+    person               Santos 50008 10001 clerk
+    person             Jonathan 50000 10000 clerk
+    person                 Kent 50015 10001 driver
+    person               Shawna 50009 10001 craneOperator
+    person             Clifford 50004 10000 stevedore
+    person             Randolph 50005 10000 driver
+
+// job    name index parent duration [skill]* (zero or more, matches skill in person, may repeat)
+//    job    <string> <int> <int> <double> [<string>]*
+    job         Job_84_49_66 60016 30005 28.71 mate craneOperator
+    job         Job_13_74_65 60024 30008 21.82 mechanic clerk
+    job         Job_74_38_21 60025 30008 53.54 cleaner mechanic craneOperator crew
+    job         Job_24_40_78 60021 30007 25.96 inspector
+    job         Job_96_83_11 60015 30005 71.36 mechanic carpenter janitor electrician
+    job         Job_57_30_55 60006 30002 27.45
+    job         Job_59_78_36 60029 30009 68.64 mate
+    job         Job_67_88_54 60013 30004 100.76 janitor
+    job         Job_99_74_87 60018 30006 96.49 inspector driver painter
+    job         Job_48_45_94 60026 30008 86.60 crew carpenter
+    job         Job_95_78_60 60000 30000 78.25
+    job         Job_29_54_39 60009 30003 20.30 mate craneOperator driver
+    job         Job_89_27_54 60003 30001 35.77 engineer
+    job         Job_17_71_69 60027 30009 83.54
+    job         Job_98_17_60 60005 30001 95.48 crew inspector craneOperator
+    job         Job_45_27_78 60007 30002 104.43
+    job         Job_62_46_47 60012 30004 114.72
+    job         Job_43_84_86 60022 30007 23.92 clerk mate
+    job         Job_10_48_15 60020 30006 34.29 janitor captain
+    job         Job_48_42_58 60028 30009 108.74 mechanic
+    job         Job_48_13_35 60001 30000 78.50 stevedore stevedore inspector
+    job         Job_51_40_67 60014 30004 95.24 mechanic stevedore
+    job         Job_40_73_63 60008 30002 30.43 driver
+    job         Job_85_97_14 60002 30000 30.37 crew
+    job         Job_27_58_89 60010 30003 77.53 clerk painter craneOperator
+    job         Job_96_32_53 60019 30006 53.52 inspector mechanic
+    job         Job_71_20_14 60017 30005 82.20 carpenter craneOperator
+    job         Job_51_42_43 60011 30003 69.94
+    job         Job_27_38_91 60004 30001 33.36 crew
+    job         Job_94_35_80 60023 30007 110.46

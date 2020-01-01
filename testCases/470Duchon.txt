@@ -1,0 +1,80 @@
+** File: 470 Duchon.txt
+** simpler test file
+** 1 port, 4 docks, 4 ships, 4 jobs per ship
+** 16 persons
+** all jobs have independent requirements
+
+// Based on:
+
+// File: aSPad.txt
+// Data file for SeaPort projects
+// Date: Fri Sep 30 13:54:19 CDT 2016
+// parameters: 2 5 10 10 5 10
+//   ports, docks, pships, cships, jobs, persons
+
+world 470_Duchon
+
+// port   name index parent(null)
+//    port   <string> <int> <int>
+port Budapest 10000 0
+
+// dock   name index parent(port)
+//    dock   <string> <int> <int>
+  dock Pier_0 20000 10000 30000
+  dock Pier_1 20001 10000 30000
+  dock Pier_2 20002 10000 30000
+  dock Pier_3 20003 10000 30000
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+//    pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+    pship         Entertainers 30000 20000 138.90 426.90 125.06 44.38 951 369 369
+    pship         Joy          30010 20001 138.90 426.90 125.06 44.38 951 369 369
+    pship         Wonder       30020 20002 138.90 426.90 125.06 44.38 951 369 369
+    pship   PraiseAndGlory     30030 20003 138.90 426.90 125.06 44.38 951 369 369
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+//    cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+
+// person name index parent skill
+//    person <string> <int> <int> <string>
+    person               Sergio 50000 10000 mechanic
+    person               Emmett 50001 10000 electrician
+    person               Monica 50002 10000 cleaner
+    person               Minnie 50003 10000 engineer
+    person                 Noel 50004 10000 janitor
+
+    person                Terry 50005 10000 painter
+    person                 Rose 50006 10000 janitor
+    person               Samuel 50007 10000 engineer
+    person               Bryant 50008 10000 stevedore
+    person              Melissa 50009 10000 clerk
+
+    person                Harry 50010 10000 painter
+    person               Lionel 50011 10000 driver
+    person                  Rex 50012 10000 mate
+    person                 Jodi 50013 10000 inspector
+    person                Jacob 50014 10000 cleaner
+
+    person                 Teri 50015 10000 engineer
+
+// job    name index parent duration [skill]+ (one or more, matches skill in person, may repeat)
+//    job    <string> <int> <int> <double> [<string>]+
+    job    -----Job_AA---- 60022 30000 83.65 mechanic
+    job    -----Job_AB---- 60041 30000 83.49 electrician
+    job    -----Job_AC---- 60037 30000 83.05 cleaner
+    job    -----Job_AD---- 60040 30000 83.60 engineer
+
+    job    -----Job_BA---- 60122 30010 83.65 painter
+    job    -----Job_BB---- 60141 30010 83.49 janitor
+    job    -----Job_BC---- 60137 30010 83.05 stevedore
+    job    -----Job_BD---- 60140 30010 83.60 clerk
+
+    job    -----Job_CA---- 60022 30020 83.65 painter
+    job    -----Job_CB---- 60041 30020 83.49 driver
+    job    -----Job_CC---- 60037 30020 83.05 mate
+    job    -----Job_CD---- 60040 30020 83.60 inspector
+
+    job    -----Job_DA---- 60122 30030 83.65 cleaner
+    job    -----Job_DB---- 60141 30030 83.49 engineer
+    job    -----Job_DC---- 60137 30030 83.05 driver 
+    job    -----Job_DD---- 60140 30030 83.60 janitor
